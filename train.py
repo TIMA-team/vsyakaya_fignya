@@ -1,8 +1,10 @@
+import tensorflow as tf
+
 
 def train_neural_network(x_train_data, y_train_data, x_test_data, y_test_data, learning_rate=0.05, keep_rate=0.7,
                          epochs=10, batch_size=32):
-    with tf.name_scope("cross_entropy"):
-        prediction = cnn_model(x_input, keep_rate, seed=1)
+    with tf.name_scope("cross_entropy"):  # wtf is x_ and y_ inputs?
+        prediction = convert.cnn_model(x_input, keep_rate, seed=1)
         cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(
             logits=prediction, labels=y_input))
 
