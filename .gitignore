@@ -6,6 +6,16 @@ __pycache__/
 # C extensions
 *.so
 
+# DATA
+mlboot_dataset/
+parallel/
+*.tsv
+molodzy.txt
+
+# GOVNOCODE BY MISHA
+redact_data.py
+forcheck.py
+
 # Distribution / packaging
 .Python
 build/
@@ -89,6 +99,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.idea/
 
 # Spyder project settings
 .spyderproject
