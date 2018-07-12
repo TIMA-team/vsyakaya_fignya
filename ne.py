@@ -18,13 +18,13 @@ with open(names.dataset, 'r', encoding='utf-8') as f:
                 tokens[id][tk] += tv
 
 with open(names.tokens1f, 'w', encoding='utf-8') as t1:
-    for k, v in tokens[0]:
+    for k, v in tokens[0].items():
         t1.write(str(k) + '\t' + str(v) + '\n')
 
 with open(names.tokens2f, 'w', encoding='utf-8') as t2:
-    for k, v in tokens[1]:
+    for k, v in tokens[1].items():
         t2.write(str(k) + '\t' + str(v) + '\n')
 
 with open(names.tokens3f, 'w', encoding='utf-8') as t3:
-    for k, v in tokens[2]:
+    for k, v in tokens[2].items():
         t3.write(str(k) + '\t' + str(v) + '\n')
