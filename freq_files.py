@@ -27,7 +27,7 @@ fom = open(names.othermetrics, 'w', encoding='utf-8')
 with open(names.v4, 'r', encoding='utf-8') as mf:
     # prev_good_cuid = ''
     # need_for_check = False
-    for line in f:
+    for line in mf:
         line_list = line[:-1].split('\t')
         label = line_list[0]
         fld.write(line_list[0] + '\n')
