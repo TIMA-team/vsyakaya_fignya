@@ -7,6 +7,8 @@ from vsyakaya_fignya import line_to_v
 def generate_batch(b_size):
   batch = np.ndarray(shape=(b_size), dtype=np.int32)
   labels = np.ndarray(shape=(b_size, 1), dtype=np.int32)
+  # tf.sparse_tensor_to_dense() ?
+  # line_to_v.get_second_sparse_vec()
   print('batch generation not implemented!')
   exit(-1)
   return batch, labels
