@@ -5,7 +5,7 @@ import convert
 
 
 with tf.name_scope('inputs'):
-    x_input = tf.placeholder(tf.float32, shape=[None, vc1num])  # vc1num?
+    x_input = tf.placeholder(tf.float32, shape=[None, vc1num])  # vc1num?# vшки counter1 number
     y_input = tf.placeholder(tf.float32, shape=[None, 2])
 
 dir = ''
