@@ -41,3 +41,8 @@ def line_to_vec(line):
     vl = []
     for i in range(3):
         vl.append(counter_to_vec(l[i], i))
+
+
+def get_second_sparse_vec(line):
+    l = re.findall(reg, line)
+    return counter_to_vec(l[1], 1)
