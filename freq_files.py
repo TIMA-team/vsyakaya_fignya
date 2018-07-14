@@ -25,19 +25,24 @@ fld = open(names.labels_ld, 'w', encoding='utf-8')
 fom = open(names.othermetrics, 'w', encoding='utf-8')
 
 with open(names.v4, 'r', encoding='utf-8') as mf:
-    # prev_good_cuid = ''
-    # need_for_check = False
+    counter = 0
     for line in mf:
+        counter += 1
+        if counter % 25000 == 0:
+            print(str((counter * 100)//12874345) + '%')
         line_list = line[:-1].split('\t')
         label = line_list[0]
         fld.write(line_list[0] + '\n')
         fom.write(line_list[1] + '\t' + line_list[-1] + '\n')
         for k, el in json.loads(line_list[2]).items():
-            fc1.write((t_freq_dicts[0][k] + '\t') * int(el) + '\n')
+            fc1.write((t_freq_dicts[0][k] + '\t') * int(el))
         for k, el in json.loads(line_list[3]).items():
-            fc2.write((t_freq_dicts[1][k] + '\t') * int(el) + '\n')
+            fc2.write((t_freq_dicts[1][k] + '\t') * int(el))
         for k, el in json.loads(line_list[4]).items():
-            fc3.write((t_freq_dicts[2][k] + '\t') * int(el) + '\n')
+            fc3.write((t_freq_dicts[2][k] + '\t') * int(el))
+        fc1.write('\n')
+        fc2.write('\n')
+        fc3.write('\n')
 
 fc1.close()
 fc2.close()
